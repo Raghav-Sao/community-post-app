@@ -31,6 +31,9 @@
   font-weight: normal;
   color: #333;
   letter-spacing: 1px; }
+  @media only screen and (max-width: 768px) {
+    .post__container .post__text {
+      font-size: 15px; } }
 
 .post__container .post__footer {
   height: 50px;
