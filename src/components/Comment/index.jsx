@@ -7,9 +7,9 @@ class Comment extends Component {
     return (
       <div className="post__comments flex__container">
         {comments.map(({ profileImage, userName, comment }, index) => (
-          <div className="post__comment flex__container m-t-10">
+          <div className="post__comment flex__container m-t-10" key={index}>
             <div className="post__user__image__container">
-              <img className="post__user__image flex__auto" src={profileImage} key={index} />
+              <img className="post__user__image flex__auto" src={profileImage} alt="img" />
             </div>
             <div className=" flex__container flex__rest border__bottom">
               <span className="flex__container comment__text">

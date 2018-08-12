@@ -1,7 +1,7 @@
 export const CHANGE_ALERT_ALERT = 'CHANGE_ALERT_ALERT'
 export const ADD_POST_DATA = 'ADD_POST_DATA'
 export const FILTER_POST_DATA = 'FILTER_POST_DATA'
-export const TOGGLE_NAV = 'TOGGLE_NAV'
+export const TOGGLE_SIDEBAR = 'TOGGLE_SIDEBAR'
 
 export const changeAlertStatus = payload => ({
   type: 'CHANGE_ALERT_ALERT',
@@ -18,6 +18,6 @@ export const filterPost = payload => ({
   payload,
 })
 
-export const toggleNav = payload => ({
-  type: TOGGLE_NAV,
+export const toggleSidebar = payload => ({
+  type: TOGGLE_SIDEBAR,
 })

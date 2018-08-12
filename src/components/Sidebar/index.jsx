@@ -10,13 +10,18 @@ class Sidebar extends Component {
     this.state = { selectedPostType: [] }
   }
 
+  preventEventPropagation(e) {
+    e.stopPropagation()
+    e.nativeEvent.stopImmediatePropagation()
+  }
+
   filterPostType = event => {
     const { target: { checked, value } } = event
     let selectedPostType = []
     if (checked && this.state.selectedPostType.indexOf(value) === -1) {
       selectedPostType = [...this.state.selectedPostType, value]
     } else {
-      selectedPostType = this.state.selectedPostType.filter(data => data != value)
+      selectedPostType = this.state.selectedPostType.filter(data => data !== value)
     }
     this.setState(
       {
@@ -29,8 +34,12 @@ class Sidebar extends Component {
   }
   render() {
     const { postFilter, showSidebar } = this.props
+    console.log(showSidebar)
     return (
-      <div className={`sidebar flex__container dir__column ${showSidebar ? 'active' : ''}`}>
+      <div
+        className={`sidebar flex__container dir__column ${showSidebar ? 'active' : ''}`}
+        onClick={e => this.preventEventPropagation(e)}
+      >
         <div className="flex__container filter">Filter</div>
         <input
           type="checkbox"

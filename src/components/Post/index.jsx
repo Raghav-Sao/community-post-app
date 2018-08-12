@@ -23,7 +23,7 @@ class Post extends Component {
           ) => (
             <div className="post__container flex__container dir__column flex__card" key={index}>
               <div className="post__header flex__container">
-                <img className="post__user__image" src={profileImage} />
+                <img className="post__user__image" src={profileImage} alt="img" />
                 <div className="flex__container post__title flex__rest">
                   <div className="flex__container flex__100">
                     <a className="link">{userName}</a> is looking for&nbsp;

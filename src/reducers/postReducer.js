@@ -1,4 +1,9 @@
-import { ADD_POST_DATA, FILTER_POST_DATA, CHANGE_ALERT_ALERT, TOGGLE_NAV } from 'actions/PostAction'
+import {
+  ADD_POST_DATA,
+  FILTER_POST_DATA,
+  CHANGE_ALERT_ALERT,
+  TOGGLE_SIDEBAR,
+} from 'actions/PostAction'
 import { postData } from './data'
 
 const initialState = {
@@ -37,7 +42,7 @@ export default function reducer(state = initialState, action = {}) {
       }
     }
 
-    case TOGGLE_NAV: {
+    case TOGGLE_SIDEBAR: {
       return {
         ...state,
         showSidebar: !state.showSidebar,

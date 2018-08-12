@@ -1,4 +1,4 @@
-import React, { Component, Fragment } from 'react'
+import React, { Component } from 'react'
 import './style.css'
 
 class PostComment extends Component {
@@ -8,7 +8,7 @@ class PostComment extends Component {
     } = this.props
     return (
       <div className="post__create__comment flex__container m-10">
-        <img className="user__image flex__auto" src={url} />
+        <img className="user__image flex__auto" src={url} alt="img" />
         <textarea className="flex__rest" placeholder="Leave a comment..." />
       </div>
     )

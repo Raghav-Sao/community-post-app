@@ -1,13 +1,31 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
-import { toggleNav } from 'actions/PostAction'
+import { toggleSidebar } from 'actions/PostAction'
 import './style.css'
 
 class Header extends Component {
+  toggleSidebar = e => {
+    this.props.dispatch(toggleSidebar())
+    e.stopPropagation()
+    e.nativeEvent.stopImmediatePropagation()
+  }
+
+  componentDidMount() {
+    document.addEventListener('click', () => this.deactiveSidebar())
+  }
+  componentWillUnmount() {
+    document.removeEventListener('click', () => this.deactiveSidebar())
+  }
+
+  deactiveSidebar() {
+    const { showSidebar, dispatch } = this.props
+    debugger
+    if (showSidebar) dispatch(toggleSidebar())
+  }
   render() {
     return (
       <div className="header flex__container">
-        <div className="nav__toggle" onClick={() => this.props.dispatch(toggleNav())}>
+        <div className="nav__toggle" onClick={e => this.toggleSidebar(e)}>
           <span className="icon-align-justify icon__button" />
         </div>
         <div className="header__text">Community</div>
@@ -21,8 +39,8 @@ class Header extends Component {
   }
 }
 
-const mapStateToProps = ({ alertReducer: showAlert }) => ({
-  showAlert,
+const mapStateToProps = ({ postReducer: { showSidebar } }) => ({
+  showSidebar,
 })
 
 export default connect(mapStateToProps)(Header)
