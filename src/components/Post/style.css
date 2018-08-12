@@ -1,43 +1,44 @@
-.post__container {
-  background-color: #fff;
-  color: #757575;
-  border: 1px solid #f1f1f1;
-  border-radius: 5px;
-  margin: 10px;
-  padding: 0.01em 16px;
-  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12) !important; }
-  .post__container .post__write {
+@media only screen and (max-width: 768px) {
+  .post__container {
+    margin: 10px;
+    display: none; } }
+
+.post__container .post__header {
+  height: 80px; }
+  .post__container .post__header .post__title {
+    line-height: 20px;
+    margin: 10px 0 0 10px; }
+  .post__container .post__header .post__user__image {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
     align-items: center;
-    border-bottom: 1px solid #757575;
-    flex: 0 0 100%;
-    font-size: 25px;
-    height: 50px; }
-    .post__container .post__write .span.icon-pencil-circled {
-      background: red; }
-    .post__container .post__write input {
-      outline: none;
-      border: none;
-      font-size: 25px;
-      letter-spacing: 1px;
-      font-weight: normal;
-      flex: 1; }
-  .post__container .post__type__container {
-    padding: 20px 0;
-    border-bottom: 1px solid #757575; }
-    .post__container .post__type__container button {
-      background: #f6fafa;
-      border-radius: 5px;
-      color: #b1b4b4;
-      font-size: 20px;
-      font-weight: 300;
-      height: 50px;
-      text-align: left; }
-      .post__container .post__type__container button.active {
-        align-items: center;
-        background: #55cc6c;
-        color: #fff;
-        outline: none; }
-  .post__container .post_creator__footer {
-    height: 50px;
-    align-items: center;
-    font-size: 20px; }
+    cursor: pointer; }
+  .post__container .post__header .post__option {
+    text-align: right;
+    margin: 10px; }
+
+.post__container .post__like__count {
+  height: 50px;
+  align-items: center;
+  font-size: 20px; }
+
+.post__container .post__text {
+  align-items: center;
+  white-space: pre-wrap;
+  font-size: 23px;
+  margin: 10px 0px;
+  font-weight: normal;
+  color: #333;
+  letter-spacing: 1px; }
+
+.post__container .post__footer {
+  height: 50px;
+  align-items: center; }
+
+.post__empty__info {
+  justify-content: center;
+  font-size: 20px;
+  color: #777;
+  align-items: center;
+  min-height: 300px; }

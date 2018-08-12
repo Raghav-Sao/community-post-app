@@ -1,4 +1,38 @@
 .sidebar {
-  position: absolute;
-  transform: translateX(-800px);
+  position: fixed;
+  left: 0;
+  height: 100vh;
+  top: 0;
+  background: #444;
+  align-content: center;
+  transition: all 1s;
+  width: 250px;
+  z-index: 5;
+  @media only screen and (max-width: 992px) {
+    margin-top: 45px;
+  }
+  @media only screen and (max-width: 576px) {
+    width: 75%;
+  }
+  .filter {
+    font-size: 20px;
+    color: #ccc;
+    margin: 15px;
+  }
+  transform: translateX(-150%);
+  input + label {
+    align-items: center;
+    margin: 10px;
+    color: #fff;
+    align-content: flex-start;
+  }
+  input:checked + label {
+    color: #55cc6c;
+    &:before {
+      content: '\e80a';
+    }
+  }
+  &.active {
+    transform: translateX(0px);
+  }
 }

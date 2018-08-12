@@ -1,3 +1,32 @@
 .sidebar {
-  position: absolute;
-  transform: translateX(-800px); }
+  position: fixed;
+  left: 0;
+  height: 100vh;
+  top: 0;
+  background: #444;
+  align-content: center;
+  transition: all 1s;
+  width: 250px;
+  z-index: 5;
+  transform: translateX(-150%); }
+  @media only screen and (max-width: 992px) {
+    .sidebar {
+      margin-top: 45px; } }
+  @media only screen and (max-width: 576px) {
+    .sidebar {
+      width: 75%; } }
+  .sidebar .filter {
+    font-size: 20px;
+    color: #ccc;
+    margin: 15px; }
+  .sidebar input + label {
+    align-items: center;
+    margin: 10px;
+    color: #fff;
+    align-content: flex-start; }
+  .sidebar input:checked + label {
+    color: #55cc6c; }
+    .sidebar input:checked + label:before {
+      content: '\e80a'; }
+  .sidebar.active {
+    transform: translateX(0px); }

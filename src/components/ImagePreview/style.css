@@ -1,0 +1,6 @@
+.image__preview__container .preview__image {
+  width: auto;
+  height: 100px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  margin: 5px; }

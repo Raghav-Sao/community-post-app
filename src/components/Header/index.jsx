@@ -1,14 +1,13 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
+import { toggleNav } from 'actions/PostAction'
 import './style.css'
 
 class Header extends Component {
   render() {
-    const { showAlert } = this.props
-    debugger
     return (
       <div className="header flex__container">
-        <div className="nav__toggle">
+        <div className="nav__toggle" onClick={() => this.props.dispatch(toggleNav())}>
           <span className="icon-align-justify icon__button" />
         </div>
         <div className="header__text">Community</div>

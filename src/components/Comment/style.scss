@@ -1,0 +1,26 @@
+.post__comments {
+  .post__comment {
+    .post__user__image__container {
+      flex: 0 0 70px;
+      .post__user__image {
+        border-radius: 50%;
+        width: 70px;
+        height: 70px;
+        width: 100%;
+        @media only screen and (max-width: 768px) {
+          width: 45px;
+          height: 45px;
+        }
+      }
+    }
+    .comment__text {
+      line-height: 30px;
+      margin-left: 25px;
+      text-align: justify;
+      @media only screen and (max-width: 768px) {
+        margin-left: 0px;
+        line-height: 20px;
+      }
+    }
+  }
+}
