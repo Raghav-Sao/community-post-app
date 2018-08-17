@@ -19,7 +19,6 @@ class Header extends Component {
 
   deactiveSidebar() {
     const { showSidebar, dispatch } = this.props
-    debugger
     if (showSidebar) dispatch(toggleSidebar())
   }
   render() {

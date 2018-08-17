@@ -34,7 +34,6 @@ class Sidebar extends Component {
   }
   render() {
     const { postFilter, showSidebar } = this.props
-    console.log(showSidebar)
     return (
       <div
         className={`sidebar flex__container dir__column ${showSidebar ? 'active' : ''}`}

@@ -13,7 +13,6 @@ class Post extends Component {
     const filteredData = postData.filter(
       data => postFilter.length === 0 || postFilter.indexOf(data.lookingFor) >= 0
     )
-    debugger
     return (
       <Fragment>
         {filteredData.map(

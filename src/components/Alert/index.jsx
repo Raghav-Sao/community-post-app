@@ -6,7 +6,6 @@ import './style.css'
 class Alert extends Component {
   render() {
     const { showAlert = false, alertText } = this.props
-    debugger
     return (
       <Fragment>
         {showAlert && (

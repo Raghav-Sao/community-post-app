@@ -31,7 +31,6 @@ class CreatePost extends Component {
   }
   changeBackground = (event, imageUrl = null) => {
     const file = imageUrl ? imageUrl : event.target.files[0]
-    console.log(file)
     if (file) {
       this.fileReader.readAsDataURL(file)
     }
